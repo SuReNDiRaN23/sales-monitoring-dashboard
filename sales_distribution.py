@@ -9,8 +9,8 @@ from io import BytesIO
 
 # Set page configuration
 st.set_page_config(
-    page_title="Advanced Sales Monitoring Dashboard",
-    page_icon="📊",
+    page_title="Sales Monitoring Dashboard",
+    page_icon="",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -84,7 +84,7 @@ def get_table_download_link(df, filename):
     return href
 
 # Dashboard layout
-st.title("📊 Advanced Sales Channel Monitoring Dashboard")
+st.title("Sales Channel Monitoring Dashboard")
 
 # Sidebar for navigation
 with st.sidebar:
@@ -162,7 +162,7 @@ with st.sidebar:
     st.divider()
     st.subheader("Data Management")
     
-    if st.button("🔄 Reset Current Week Data"):
+    if st.button("Reset Current Week Data"):
         current_data['channel_data']['Amount Spent'] = [0.0] * 8
         current_data['channel_data']['Actual Sales'] = [0.0] * 8
         current_data['channel_data']['Site Visits/Reach'] = [0] * 8
